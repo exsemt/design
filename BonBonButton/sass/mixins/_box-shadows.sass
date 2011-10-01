@@ -1,0 +1,9 @@
+// useage:
+
+  +box-shadows("inset 0px 1px 2px 3px blue, 3px 2px 1px black")
+
+=box-shadows($shadows)
+  @if $shadows == none
+    +experimental(box-shadow, none, -moz, -webkit, -o, not -ms, not -khtml, official)
+  @else
+    +experimental(box-shadow, unquote($shadows), -moz, -webkit, -o, not -ms, not -khtml, official)
